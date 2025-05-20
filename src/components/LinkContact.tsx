@@ -6,7 +6,7 @@ const LinkContact = () => {
       <img
         src={LinkContactImage}
         alt="link-contact image"
-        className="size-[200px] object-cover hover:scale-105 transition-all duration-150 rounded-xl"
+        className="size-[200px] object-cover hover:scale-105 transition-all duration-150 rounded-lg"
       />
     </div>
   )

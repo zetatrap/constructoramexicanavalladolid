@@ -93,11 +93,19 @@ import Puente1Image from '@/assets/images/vías-públicas-e-infraestructura/puen
 import Puente2Image from '@/assets/images/vías-públicas-e-infraestructura/puentes-2.jpg'
 import Puente3Image from '@/assets/images/vías-públicas-e-infraestructura/puentes-3.jpg'
 
+/* HEADERS */
+import CasasApartamentosHeader from '@/assets/images/headers/casas-y-apartamentos.jpg'
+import ObrasComercialesHeader from '@/assets/images/headers/obras-comerciales.jpg'
+import InmueblesIndustrialesHeader from '@/assets/images/headers/inmuebles-industriales.jpg'
+import ConstrucciónInstitucionalHeader from '@/assets/images/headers/construcción-institucional.jpg'
+import VíasPúblicasInfraestructuraHeader from '@/assets/images/headers/vías-públicas-e-infraestructura.jpg'
+
 export const WORKS = [
   {
     id: 1,
     label: 'Casas / Apartamentos',
     link: 'casas-apartamentos',
+    image: CasasApartamentosHeader,
     subworks: [
       {
         id: 1,
@@ -178,6 +186,7 @@ export const WORKS = [
     id: 2,
     label: 'Obras Comerciales',
     link: 'obras-comerciales',
+    image: ObrasComercialesHeader,
     subworks: [
       {
         id: 1,
@@ -210,6 +219,7 @@ export const WORKS = [
     id: 3,
     label: 'Inmuebles Industriales',
     link: 'inmuebles-industriales',
+    image: InmueblesIndustrialesHeader,
     subworks: [
       {
         id: 1,
@@ -235,6 +245,7 @@ export const WORKS = [
     id: 4,
     label: 'Construcción Institucional',
     link: 'construcción-institucional',
+    image: ConstrucciónInstitucionalHeader,
     subworks: [
       {
         id: 1,
@@ -259,6 +270,7 @@ export const WORKS = [
     id: 5,
     label: 'Vías Públicas e Infraestructura',
     link: 'vias-públicas-e-infraestructura',
+    image: VíasPúblicasInfraestructuraHeader,
     subworks: [
       {
         id: 1,

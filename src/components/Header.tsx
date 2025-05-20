@@ -4,9 +4,9 @@ import { useNavigate } from 'react-router-dom'
 import { WORKS } from '@/data'
 
 const NAV_LINK = [
-  { id: 1, label: 'Inicio' },
+  { id: 1, label: 'Inicio', link: '/' },
   { id: 2, label: 'Obras' },
-  { id: 3, label: 'Contacto' },
+  { id: 3, label: 'Contacto', link: '/contacto' },
 ]
 
 const Header = () => {
@@ -67,10 +67,10 @@ const Header = () => {
   }, [showMobileMenu])
 
   return (
-    <header className="bg-[#272727] w-full font-inter text-white py-5 px-3 relative">
+    <header className="bg-[#272727] w-full font-poppins text-white py-5 px-3 relative">
       <div className="max-w-[1200px] w-full flex items-center justify-between mx-auto">
         <h1
-          onClick={() => navigate('/')}
+          onClick={() => navigateWithTransition('/')}
           className="font-bold text-xl cursor-pointer"
         >
           LOGO
@@ -85,15 +85,20 @@ const Header = () => {
             <Hamburger className="size-8 cursor-pointer" />
           </button>
           <ul className="items-center gap-7 hidden sm:flex">
-            {NAV_LINK.map(({ id, label }) => (
+            {NAV_LINK.map(({ id, label, link }) => (
               <li
                 key={id}
                 ref={label === 'Obras' ? obrasRef : null}
-                className="py-2 px-3 hover:bg-[#333] cursor-pointer transition-all duration-300 ease-in-out rounded-md text-lg font-semibold relative"
+                onClick={
+                  link && label !== 'Obras'
+                    ? () => navigateWithTransition(link)
+                    : undefined
+                }
+                className="cursor-pointer text-lg font-semibold relative"
               >
                 <span
                   onClick={label === 'Obras' ? toggleWorksMenu : undefined}
-                  className="flex items-center"
+                  className="flex items-center text-white hover:bg-amber-100 hover:text-amber-950 py-1 px-3 transition-all duration-300 ease-in-out rounded-sm"
                 >
                   {label}
                   {label === 'Obras' && (
@@ -103,16 +108,18 @@ const Header = () => {
                 {label === 'Obras' && isWorksOpen && (
                   <ul
                     ref={dropdownRef}
-                    className="absolute left-1/2 -translate-x-1/2 top-full z-50 flex flex-col min-w-[270px] shadow-md bg-[#272727]"
+                    className="absolute left-1/2 -translate-x-1/2 top-full z-50 flex flex-col min-w-[280px] shadow-md bg-[#272727]"
                   >
                     {WORKS.map(({ id, label, subworks, link }) => (
                       <li
                         key={id}
                         onClick={() => toggleSubWordsMenu(id)}
-                        className="text-base p-2 hover:bg-[#333] w-full relative"
+                        className="text-base w-full relative"
                       >
-                        {label}
-                        <span className="text-xs ml-0.5">▼</span>
+                        <span className="flex items-center gap-0.5 p-2 hover:text-amber-950 hover:bg-amber-100 transition-all duration-300 ease-in-out">
+                          {label}
+                          <strong className="text-xs">▼</strong>
+                        </span>
                         {openWorkId === id && (
                           <ul className="absolute left-0 top-full z-[60] flex flex-col min-w-[270px] shadow-md bg-[#333]">
                             {subworks.map(({ id, label, sublink }) => (
@@ -121,7 +128,7 @@ const Header = () => {
                                 onClick={() =>
                                   navigateWithTransition(`/${link}/${sublink}`)
                                 }
-                                className="hover:bg-[#444] cursor-pointer w-full p-2"
+                                className="hover:bg-amber-100 hover:text-amber-950 transition-all duration-300 ease-in-out cursor-pointer w-full p-2"
                               >
                                 {label}
                               </li>

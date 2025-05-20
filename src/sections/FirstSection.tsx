@@ -1,12 +1,14 @@
-import FirstSectionImage from '@/assets/images/first-section.jpg'
+interface Props {
+  image: string
+}
 
-const FirstSection = () => {
+const FirstSection: React.FC<Props> = ({ image }) => {
   return (
     <section>
       <img
-        src={FirstSectionImage}
+        src={image}
         alt="first-section-image"
-        className="w-full h-[400px] object-cover"
+        className="w-full h-[600px] object-cover"
       />
     </section>
   )

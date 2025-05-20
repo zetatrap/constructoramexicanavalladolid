@@ -3,6 +3,8 @@ import Header from './components/Header'
 import LinkContact from './components/LinkContact'
 import Home from './views/Home'
 import WorkDetail from './views/WorkDetail'
+import Contact from './views/Contact'
+import ContactCard from './components/ContactCard'
 
 function App() {
   return (
@@ -11,8 +13,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/:work/:subwork" element={<WorkDetail />} />
+        <Route path="/contacto" element={<Contact />} />
       </Routes>
       <LinkContact />
+      <ContactCard />
     </div>
   )
 }
