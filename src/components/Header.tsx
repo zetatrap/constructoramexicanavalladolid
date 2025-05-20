@@ -1,58 +1,12 @@
 import { useState, useEffect, useRef } from 'react'
 import { Hamburger } from '@/icons'
+import { useNavigate } from 'react-router-dom'
+import { WORKS } from '@/data'
 
 const NAV_LINK = [
   { id: 1, label: 'Inicio' },
   { id: 2, label: 'Obras' },
   { id: 3, label: 'Contacto' },
-]
-
-const WORKS = [
-  {
-    id: 1,
-    label: 'Casas / Apartamentos',
-    subworks: [
-      { id: 1, label: 'Terminado Básico' },
-      { id: 2, label: 'Terminado Medio Residencial' },
-      { id: 3, label: 'Terminado Residencial' },
-      { id: 4, label: 'Terminado de Lujo' },
-    ],
-  },
-  {
-    id: 2,
-    label: 'Obras Comerciales',
-    subworks: [
-      { id: 1, label: 'Hoteles' },
-      { id: 2, label: 'Tiendas Oficinas' },
-      { id: 3, label: 'Restaurantes' },
-      { id: 4, label: 'Mobiliarios' },
-    ],
-  },
-  {
-    id: 3,
-    label: 'Inmuebles Industriales',
-    subworks: [
-      { id: 1, label: 'Fábricas' },
-      { id: 2, label: 'Almacenes' },
-      { id: 3, label: 'Bodegas' },
-    ],
-  },
-  {
-    id: 4,
-    label: 'Construcción Institucional',
-    subworks: [
-      { id: 1, label: 'Escuelas' },
-      { id: 2, label: 'Hospitales' },
-    ],
-  },
-  {
-    id: 5,
-    label: 'Vías Públicas e Infraestructura',
-    subworks: [
-      { id: 1, label: 'Carreteras' },
-      { id: 2, label: 'Puentes' },
-    ],
-  },
 ]
 
 const Header = () => {
@@ -63,6 +17,8 @@ const Header = () => {
   const obrasRef = useRef<HTMLLIElement>(null)
   const dropdownRef = useRef<HTMLUListElement>(null)
   const menuMobileRef = useRef<HTMLUListElement>(null)
+
+  const navigate = useNavigate()
 
   const toggleWorksMenu = () => {
     setIsWorksOpen(!isWorksOpen)
@@ -95,6 +51,14 @@ const Header = () => {
     }
   }
 
+  const navigateWithTransition = (to: string) => {
+    if ('startViewTransition' in document) {
+      document.startViewTransition(() => navigate(to))
+    } else {
+      navigate(to)
+    }
+  }
+
   useEffect(() => {
     document.addEventListener('mousedown', handleClickOutside)
     return () => {
@@ -105,7 +69,12 @@ const Header = () => {
   return (
     <header className="bg-[#272727] w-full font-inter text-white py-5 px-3 relative">
       <div className="max-w-[1200px] w-full flex items-center justify-between mx-auto">
-        <h1 className="font-bold text-xl">LOGO</h1>
+        <h1
+          onClick={() => navigate('/')}
+          className="font-bold text-xl cursor-pointer"
+        >
+          LOGO
+        </h1>
 
         <nav>
           <button
@@ -136,7 +105,7 @@ const Header = () => {
                     ref={dropdownRef}
                     className="absolute left-1/2 -translate-x-1/2 top-full z-50 flex flex-col min-w-[270px] shadow-md bg-[#272727]"
                   >
-                    {WORKS.map(({ id, label, subworks }) => (
+                    {WORKS.map(({ id, label, subworks, link }) => (
                       <li
                         key={id}
                         onClick={() => toggleSubWordsMenu(id)}
@@ -146,9 +115,12 @@ const Header = () => {
                         <span className="text-xs ml-0.5">▼</span>
                         {openWorkId === id && (
                           <ul className="absolute left-0 top-full z-[60] flex flex-col min-w-[270px] shadow-md bg-[#333]">
-                            {subworks.map(({ id, label }) => (
+                            {subworks.map(({ id, label, sublink }) => (
                               <li
                                 key={id}
+                                onClick={() =>
+                                  navigateWithTransition(`/${link}/${sublink}`)
+                                }
                                 className="hover:bg-[#444] cursor-pointer w-full p-2"
                               >
                                 {label}

@@ -25,7 +25,7 @@ const SeconCard: React.FC<SeconCardProps> = ({ type, data }) => {
       <img
         src={data.image}
         alt={`${data.id} image`}
-        className="h-[400px] w-3/5 rounded-xl object-cover shadow-2xl shadow-[#353535] hover:scale-105 transition-all duration-200"
+        className="h-[350px] w-3/5 rounded-xl object-cover shadow-2xl shadow-[#353535] hover:scale-105 transition-all duration-200"
       />
     </article>
   )

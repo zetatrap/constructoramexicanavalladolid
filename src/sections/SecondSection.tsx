@@ -16,7 +16,7 @@ const DATA = [
 const SecondSection = () => {
   return (
     <section className="max-w-[1200px] mx-auto font-inter mt-10">
-      <h2 className="text-center text-white font-semibold text-4xl text-pretty">
+      <h2 className="text-center text-white font-semibold text-3xl text-pretty">
         Nuestro compromiso es brindar soluciones innovadoras, sostenibles y de
         calidad.
       </h2>

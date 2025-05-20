@@ -1,0 +1,277 @@
+/* CASAS */
+// Casas Básico
+import CasaBásico1Image from '@/assets/images/casas/casa-básico-1.png'
+import CasaBásico2Image from '@/assets/images/casas/casa-básico-2.png'
+import CasaBásico3Image from '@/assets/images/casas/casa-básico-3.png'
+import CasaBásico4Image from '@/assets/images/casas/casa-básico-4.png'
+import CasaBásico5Image from '@/assets/images/casas/casa-básico-5.png'
+import CasaBásico6Image from '@/assets/images/casas/casa-básico-6.png'
+import CasaBásico7Image from '@/assets/images/casas/casa-básico-7.png'
+// Casas de Lujo
+import CasaLujo1Image from '@/assets/images/casas/casa-de-lujo-1.jpg'
+import CasaLujo2Image from '@/assets/images/casas/casa-de-lujo-2.jpg'
+import CasaLujo3Image from '@/assets/images/casas/casa-de-lujo-3.jpg'
+import CasaLujo4Image from '@/assets/images/casas/casa-de-lujo-4.jpg'
+import CasaLujo5Image from '@/assets/images/casas/casa-de-lujo-5.jpg'
+import CasaLujo6Image from '@/assets/images/casas/casa-de-lujo-6.jpg'
+import CasaLujo7Image from '@/assets/images/casas/casa-de-lujo-7.jpg'
+// Casas Medio Residencial
+import CasaMedioResidencial1Image from '@/assets/images/casas/casa-medio-residencial-1.png'
+import CasaMedioResidencial2Image from '@/assets/images/casas/casa-medio-residencial-2.png'
+import CasaMedioResidencial3Image from '@/assets/images/casas/casa-medio-residencial-3.png'
+import CasaMedioResidencial4Image from '@/assets/images/casas/casa-medio-residencial-4.png'
+import CasaMedioResidencial5Image from '@/assets/images/casas/casa-medio-residencial-5.png'
+// Casas Residenciales
+import CasaResidencial1Image from '@/assets/images/casas/casa-residencial-1.png'
+import CasaResidencial2Image from '@/assets/images/casas/casa-residencial-2.png'
+import CasaResidencial3Image from '@/assets/images/casas/casa-residencial-3.png'
+import CasaResidencial4Image from '@/assets/images/casas/casa-residencial-4.png'
+import CasaResidencial5Image from '@/assets/images/casas/casa-residencial-5.png'
+import CasaResidencial6Image from '@/assets/images/casas/casa-residencial-6.png'
+import CasaResidencial7Image from '@/assets/images/casas/casa-residencial-7.png'
+import CasaResidencial8Image from '@/assets/images/casas/casa-residencial-8.png'
+
+/* DEPARTAMENTOS */
+// Departamentos Básico
+import DepartamentoBásico1Image from '@/assets/images/departamentos/departamento-básico-1.jpg'
+import DepartamentoBásico2Image from '@/assets/images/departamentos/departamento-básico-2.jpg'
+// Departamentos de Lujo
+import DepartamentoLujo1Image from '@/assets/images/departamentos/departamento-de-lujo-1.jpg'
+import DepartamentoLujo2Image from '@/assets/images/departamentos/departamento-de-lujo-2.jpg'
+// Departamentos Medio Residencial
+import DepartamentoMedioResidencial1Image from '@/assets/images/departamentos/departamento-medio-residencial-1.jpg'
+import DepartamentoMedioResidencial2Image from '@/assets/images/departamentos/departamento-medio-residencial-2.jpg'
+// Departamentos Residenciales
+import DepartamentoResidencial1Image from '@/assets/images/departamentos/departamento-residencial-1.jpg'
+import DepartamentoResidencial2Image from '@/assets/images/departamentos/departamento-residencial-2.jpg'
+
+/* OBRAS COMERCIALES */
+// Hoteles
+import Hotel1Image from '@/assets/images/obras-comerciales/hoteles-1.jpg'
+import Hotel2Image from '@/assets/images/obras-comerciales/hoteles-2.jpg'
+import Hotel3Image from '@/assets/images/obras-comerciales/hoteles-3.jpg'
+// Oficinas
+import Oficina1Image from '@/assets/images/obras-comerciales/oficinas-1.jpg'
+import Oficina2Image from '@/assets/images/obras-comerciales/oficinas-2.jpg'
+// Restaurantes
+import Restaurante1Image from '@/assets/images/obras-comerciales/restaurantes-1.jpg'
+import Restaurante2Image from '@/assets/images/obras-comerciales/restaurantes-2.jpg'
+// Tiendas
+import Tienda1Image from '@/assets/images/obras-comerciales/tiendas-1.jpg'
+import Tienda2Image from '@/assets/images/obras-comerciales/tiendas-2.jpg'
+
+/* INMUEBLES INDUSTRIALES */
+// Almacenes
+import Almacen1Image from '@/assets/images/inmuebles-industriales/almacenes-1.jpg'
+import Almacen2Image from '@/assets/images/inmuebles-industriales/almacenes-2.jpg'
+// Bodegas
+import Bodega1Image from '@/assets/images/inmuebles-industriales/bodegas-1.jpg'
+import Bodega2Image from '@/assets/images/inmuebles-industriales/bodegas-2.jpg'
+import Bodega3Image from '@/assets/images/inmuebles-industriales/bodegas-3.jpg'
+import Bodega4Image from '@/assets/images/inmuebles-industriales/bodegas-4.jpg'
+// Fábricas
+import Fábrica1Image from '@/assets/images/inmuebles-industriales/fábricas-1.jpg'
+import Fábrica2Image from '@/assets/images/inmuebles-industriales/fábricas-2.jpg'
+
+/* CONSTRUCCIÓN INSTITUCIONAL */
+// Escuelas
+import Escuela1Image from '@/assets/images/construcción-institucional/escuelas-1.jpg'
+import Escuela2Image from '@/assets/images/construcción-institucional/escuelas-2.jpg'
+// Hospitales
+import Hospital1Image from '@/assets/images/construcción-institucional/hospitales-1.jpg'
+import Hospital2Image from '@/assets/images/construcción-institucional/hospitales-2.jpg'
+import Hospital3Image from '@/assets/images/construcción-institucional/hospitales-3.jpg'
+import Hospital4Image from '@/assets/images/construcción-institucional/hospitales-4.jpg'
+
+/* VÍAS PÚBLICAS E INFRAESTRUCTURA */
+// Carreteras
+import Carretera1Image from '@/assets/images/vías-públicas-e-infraestructura/carreteras-1.jpg'
+import Carretera2Image from '@/assets/images/vías-públicas-e-infraestructura/carreteras-2.jpg'
+import Carretera3Image from '@/assets/images/vías-públicas-e-infraestructura/carreteras-3.jpg'
+// Puentes
+import Puente1Image from '@/assets/images/vías-públicas-e-infraestructura/puentes-1.jpg'
+import Puente2Image from '@/assets/images/vías-públicas-e-infraestructura/puentes-2.jpg'
+import Puente3Image from '@/assets/images/vías-públicas-e-infraestructura/puentes-3.jpg'
+
+export const WORKS = [
+  {
+    id: 1,
+    label: 'Casas / Apartamentos',
+    link: 'casas-apartamentos',
+    subworks: [
+      {
+        id: 1,
+        label: 'Terminado Básico',
+        sublink: 'terminado-básico',
+        images: {
+          casas: [
+            CasaBásico1Image,
+            CasaBásico2Image,
+            CasaBásico3Image,
+            CasaBásico4Image,
+            CasaBásico5Image,
+            CasaBásico6Image,
+            CasaBásico7Image,
+          ],
+          departamentos: [DepartamentoBásico1Image, DepartamentoBásico2Image],
+        },
+      },
+      {
+        id: 2,
+        label: 'Terminado Medio Residencial',
+        sublink: 'terminado-medio-residencial',
+        images: {
+          casas: [
+            CasaMedioResidencial1Image,
+            CasaMedioResidencial2Image,
+            CasaMedioResidencial3Image,
+            CasaMedioResidencial4Image,
+            CasaMedioResidencial5Image,
+          ],
+          departamentos: [
+            DepartamentoMedioResidencial1Image,
+            DepartamentoMedioResidencial2Image,
+          ],
+        },
+      },
+      {
+        id: 3,
+        label: 'Terminado Residencial',
+        sublink: 'terminado-residencial',
+        images: {
+          casas: [
+            CasaResidencial1Image,
+            CasaResidencial2Image,
+            CasaResidencial3Image,
+            CasaResidencial4Image,
+            CasaResidencial5Image,
+            CasaResidencial6Image,
+            CasaResidencial7Image,
+            CasaResidencial8Image,
+          ],
+          departamentos: [
+            DepartamentoResidencial1Image,
+            DepartamentoResidencial2Image,
+          ],
+        },
+      },
+      {
+        id: 4,
+        label: 'Terminado de Lujo',
+        sublink: 'terminado-de-lujo',
+        images: {
+          casas: [
+            CasaLujo1Image,
+            CasaLujo2Image,
+            CasaLujo3Image,
+            CasaLujo4Image,
+            CasaLujo5Image,
+            CasaLujo6Image,
+            CasaLujo7Image,
+          ],
+          departamentos: [DepartamentoLujo1Image, DepartamentoLujo2Image],
+        },
+      },
+    ],
+  },
+  {
+    id: 2,
+    label: 'Obras Comerciales',
+    link: 'obras-comerciales',
+    subworks: [
+      {
+        id: 1,
+        label: 'Hoteles',
+        sublink: 'hoteles',
+        images: [Hotel1Image, Hotel2Image, Hotel3Image],
+      },
+      {
+        id: 2,
+        label: 'Tiendas',
+        sublink: 'tiendas',
+        images: [Tienda1Image, Tienda2Image],
+      },
+      {
+        id: 3,
+        label: 'Oficinas',
+        sublink: 'oficinas',
+        images: [Oficina1Image, Oficina2Image],
+      },
+      {
+        id: 4,
+        label: 'Restaurantes',
+        sublink: 'restaurantes',
+        images: [Restaurante1Image, Restaurante2Image],
+      },
+      // { id: 5, label: 'Mobiliarios', sublink: 'mobiliarios' },
+    ],
+  },
+  {
+    id: 3,
+    label: 'Inmuebles Industriales',
+    link: 'inmuebles-industriales',
+    subworks: [
+      {
+        id: 1,
+        label: 'Fábricas',
+        sublink: 'fábricas',
+        images: [Fábrica1Image, Fábrica2Image],
+      },
+      {
+        id: 2,
+        label: 'Almacenes',
+        sublink: 'almacenes',
+        images: [Almacen1Image, Almacen2Image],
+      },
+      {
+        id: 3,
+        label: 'Bodegas',
+        sublink: 'bodegas',
+        images: [Bodega1Image, Bodega2Image, Bodega3Image, Bodega4Image],
+      },
+    ],
+  },
+  {
+    id: 4,
+    label: 'Construcción Institucional',
+    link: 'construcción-institucional',
+    subworks: [
+      {
+        id: 1,
+        label: 'Escuelas',
+        sublink: 'escuelas',
+        images: [Escuela1Image, Escuela2Image],
+      },
+      {
+        id: 2,
+        label: 'Hospitales',
+        sublink: 'hospitales',
+        images: [
+          Hospital1Image,
+          Hospital2Image,
+          Hospital3Image,
+          Hospital4Image,
+        ],
+      },
+    ],
+  },
+  {
+    id: 5,
+    label: 'Vías Públicas e Infraestructura',
+    link: 'vias-públicas-e-infraestructura',
+    subworks: [
+      {
+        id: 1,
+        label: 'Carreteras',
+        sublink: 'carreteras',
+        images: [Carretera1Image, Carretera2Image, Carretera3Image],
+      },
+      {
+        id: 2,
+        label: 'Puentes',
+        sublink: 'puentes',
+        images: [Puente1Image, Puente2Image, Puente3Image],
+      },
+    ],
+  },
+]
