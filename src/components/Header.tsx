@@ -103,7 +103,7 @@ const Header = () => {
   }, [showMobileMenu])
 
   return (
-    <header className="bg-[#272727] w-full font-inter text-white py-6 px-3 relative">
+    <header className="bg-[#272727] w-full font-inter text-white py-5 px-3 relative">
       <div className="max-w-[1200px] w-full flex items-center justify-between mx-auto">
         <h1 className="font-bold text-xl">LOGO</h1>
 

@@ -1,5 +1,4 @@
-import SecondCard from '@/components/SecondCard/SecondCard'
-import style from './SecondSection.module.css'
+import SeconCard from '@/components/SecondCard'
 
 const DATA = [
   {
@@ -16,15 +15,19 @@ const DATA = [
 
 const SecondSection = () => {
   return (
-    <section className={style.secondSection}>
-      <span>
+    <section className="max-w-[1200px] mx-auto font-inter mt-10">
+      <h2 className="text-center text-white font-semibold text-4xl text-pretty">
         Nuestro compromiso es brindar soluciones innovadoras, sostenibles y de
         calidad.
-      </span>
+      </h2>
 
-      <div>
-        {DATA.map((item) => (
-          <SecondCard data={item} />
+      <div className='mt-10 flex flex-col gap-12'>
+        {DATA.map((data, index) => (
+          <SeconCard
+            key={data.id}
+            data={data}
+            type={index % 2 === 0 ? '1' : '2'}
+          />
         ))}
       </div>
     </section>
