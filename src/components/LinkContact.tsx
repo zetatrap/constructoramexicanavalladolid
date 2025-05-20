@@ -2,7 +2,7 @@ import LinkContactImage from '@/assets/images/link-contact-image.png'
 
 const LinkContact = () => {
   return (
-    <div className="absolute right-5 bottom-5 cursor-pointer">
+    <div className="fixed bottom-5 right-5 cursor-pointer">
       <img
         src={LinkContactImage}
         alt="link-contact image"
