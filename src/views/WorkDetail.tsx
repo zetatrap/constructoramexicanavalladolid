@@ -67,7 +67,7 @@ const WorkDetail = () => {
             </div>
           ) : (
             Object.entries(selectedSubwork.images).map(([tipo, imgs]) => (
-              <div key={tipo} className="mb-10">
+              <div key={tipo}>
                 <h4 className="text-amber-100 font-semibold text-2xl mb-4 capitalize font-inter">
                   {tipo}
                 </h4>
@@ -97,7 +97,7 @@ const WorkDetail = () => {
           ))}
       </div>
 
-      <div className="flex justify-center">
+      <div className="flex justify-center mt-10">
         <button className="bg-amber-300 text-neutral-800 shadow-md shadow-amber-400 font-inter px-10 py-3 rounded-md font-bold text-xl cursor-pointer">
           Contactar
         </button>
