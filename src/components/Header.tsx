@@ -122,7 +122,7 @@ const Header = () => {
                           <strong className="text-xs">▼</strong>
                         </span>
                         {openWorkId === id && (
-                          <ul className="absolute left-0 top-full z-[60] flex flex-col min-w-[270px] shadow-md bg-[#333]">
+                          <ul className="absolute left-0 top-full z-[60] flex flex-col min-w-[280px] shadow-md bg-[#333]">
                             {subworks.map(({ id, label, sublink }) => (
                               <li
                                 key={id}
