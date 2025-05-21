@@ -5,20 +5,10 @@ import FirstSection from '@/sections/FirstSection'
 const WorkDetail = () => {
   const { work, subwork } = useParams()
 
-  const formatSubwork = (text?: string) => {
-    if (!text) return ''
-    return text
-      .split('-')
-      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(' ')
-  }
-
   const selectedWork = WORKS.find((w) => w.link === work)
   const selectedSubwork = selectedWork?.subworks.find(
     (s) => s.sublink === subwork
   )
-
-  //galeria técnica
 
   return (
     <>
@@ -26,19 +16,11 @@ const WorkDetail = () => {
 
       <div className="my-10 flex flex-col items-center gap-5">
         <h2 className="text-center text-amber-800 bg-amber-200 text-3xl font-poppins w-full py-2">
-          {work === 'casas-apartamentos'
-            ? 'Casas y apartamentos'
-            : work === 'obras-comerciales'
-            ? 'Obras comerciales'
-            : work === 'inmuebles-industriales'
-            ? 'Inmuebles industriales'
-            : work === 'construcción-institucional'
-            ? 'Construcción institucional'
-            : 'Vías Públicas e Infraestructura'}
+          {selectedWork?.label}
         </h2>
 
         <h3 className="text-center text-amber-50 font-medium text-3xl font-poppins">
-          {formatSubwork(subwork)}
+          {selectedSubwork?.label}
         </h3>
       </div>
 
@@ -123,8 +105,8 @@ const WorkDetail = () => {
           ))}
       </div>
 
-      <div className="flex justify-center mt-10">
-        <button className="bg-amber-200 text-amber-950 shadow-md shadow-amber-400 font-poppins px-10 py-3 rounded-md font-bold text-xl cursor-pointer">
+      <div className="flex justify-center mt-10 mb-20">
+        <button className="bg-amber-200 text-amber-950 shadow-md shadow-amber-400 hover:bg-amber-100 transition duration-200 font-poppins px-10 py-3 rounded-md font-bold text-xl cursor-pointer">
           Contactar
         </button>
       </div>

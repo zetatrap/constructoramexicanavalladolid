@@ -85,13 +85,13 @@ import Hospital4Image from '@/assets/images/construcción-institucional/hospital
 
 /* VÍAS PÚBLICAS E INFRAESTRUCTURA */
 // Carreteras
-import Carretera1Image from '@/assets/images/vías-públicas-e-infraestructura/carreteras-1.jpg'
-import Carretera2Image from '@/assets/images/vías-públicas-e-infraestructura/carreteras-2.jpg'
-import Carretera3Image from '@/assets/images/vías-públicas-e-infraestructura/carreteras-3.jpg'
+import Carretera1Image from '@/assets/images/vias-publicas-e-infraestructura/carreteras-1.jpg'
+import Carretera2Image from '@/assets/images/vias-publicas-e-infraestructura/carreteras-2.jpg'
+import Carretera3Image from '@/assets/images/vias-publicas-e-infraestructura/carreteras-3.jpg'
 // Puentes
-import Puente1Image from '@/assets/images/vías-públicas-e-infraestructura/puentes-1.jpg'
-import Puente2Image from '@/assets/images/vías-públicas-e-infraestructura/puentes-2.jpg'
-import Puente3Image from '@/assets/images/vías-públicas-e-infraestructura/puentes-3.jpg'
+import Puente1Image from '@/assets/images/vias-publicas-e-infraestructura/puentes-1.jpg'
+import Puente2Image from '@/assets/images/vias-publicas-e-infraestructura/puentes-2.jpg'
+import Puente3Image from '@/assets/images/vias-publicas-e-infraestructura/puentes-3.jpg'
 
 /* HEADERS */
 import CasasApartamentosHeader from '@/assets/images/headers/casas-y-apartamentos.jpg'
@@ -99,6 +99,24 @@ import ObrasComercialesHeader from '@/assets/images/headers/obras-comerciales.jp
 import InmueblesIndustrialesHeader from '@/assets/images/headers/inmuebles-industriales.jpg'
 import ConstrucciónInstitucionalHeader from '@/assets/images/headers/construcción-institucional.jpg'
 import VíasPúblicasInfraestructuraHeader from '@/assets/images/headers/vías-públicas-e-infraestructura.jpg'
+
+/* GALERÍA TÉCNICA */
+// Planos
+import Planos1Image from '@/assets/images/galeria-tecnica/planos-1.jpg'
+import Planos2Image from '@/assets/images/galeria-tecnica/planos-2.jpg'
+import Planos3Image from '@/assets/images/galeria-tecnica/planos-3.jpg'
+// Reccorridos Virtuales
+import RecorridosVirtuales1Image from '@/assets/images/galeria-tecnica/recorridos-virtuales-1.jpg'
+import RecorridosVirtuales2Image from '@/assets/images/galeria-tecnica/recorridos-virtuales-2.jpg'
+import RecorridosVirtuales3Image from '@/assets/images/galeria-tecnica/recorridos-virtuales-3.jpg'
+// Renders
+import Renders1Image from '@/assets/images/galeria-tecnica/renders-1.jpg'
+import Renders2Image from '@/assets/images/galeria-tecnica/renders-2.jpg'
+import Renders3Image from '@/assets/images/galeria-tecnica/renders-3.jpg'
+import Renders4Image from '@/assets/images/galeria-tecnica/renders-4.jpg'
+import Renders5Image from '@/assets/images/galeria-tecnica/renders-5.jpg'
+import Renders6Image from '@/assets/images/galeria-tecnica/renders-6.jpg'
+import Renders7Image from '@/assets/images/galeria-tecnica/renders-7.jpg'
 
 export const WORKS = [
   {
@@ -110,7 +128,7 @@ export const WORKS = [
       {
         id: 1,
         label: 'Terminado Básico',
-        sublink: 'terminado-básico',
+        sublink: 'terminado-basico',
         images: {
           casas: [
             CasaBásico1Image,
@@ -224,7 +242,7 @@ export const WORKS = [
       {
         id: 1,
         label: 'Fábricas',
-        sublink: 'fábricas',
+        sublink: 'fabricas',
         images: [Fábrica1Image, Fábrica2Image],
       },
       {
@@ -244,7 +262,7 @@ export const WORKS = [
   {
     id: 4,
     label: 'Construcción Institucional',
-    link: 'construcción-institucional',
+    link: 'construccion-institucional',
     image: ConstrucciónInstitucionalHeader,
     subworks: [
       {
@@ -269,7 +287,7 @@ export const WORKS = [
   {
     id: 5,
     label: 'Vías Públicas e Infraestructura',
-    link: 'vias-públicas-e-infraestructura',
+    link: 'vias-publicas-e-infraestructura',
     image: VíasPúblicasInfraestructuraHeader,
     subworks: [
       {
@@ -284,6 +302,36 @@ export const WORKS = [
         sublink: 'puentes',
         images: [Puente1Image, Puente2Image, Puente3Image],
       },
+    ],
+  },
+]
+
+export const TECH_GALLERY = [
+  {
+    id: 1,
+    label: 'Planos',
+    images: [Planos1Image, Planos2Image, Planos3Image],
+  },
+  {
+    id: 2,
+    label: 'Renders',
+    images: [
+      Renders1Image,
+      Renders2Image,
+      Renders3Image,
+      Renders4Image,
+      Renders5Image,
+      Renders6Image,
+      Renders7Image,
+    ],
+  },
+  {
+    id: 3,
+    label: 'Recorridos Virtuales',
+    images: [
+      RecorridosVirtuales1Image,
+      RecorridosVirtuales2Image,
+      RecorridosVirtuales3Image,
     ],
   },
 ]

@@ -7,6 +7,7 @@ const NAV_LINK = [
   { id: 1, label: 'Inicio', link: '/' },
   { id: 2, label: 'Obras' },
   { id: 3, label: 'Contacto', link: '/contacto' },
+  { id: 4, label: 'Galería Técnica', link: '/galeria-tecnica' },
 ]
 
 const Header = () => {
@@ -84,7 +85,7 @@ const Header = () => {
           >
             <Hamburger className="size-8 cursor-pointer" />
           </button>
-          <ul className="items-center gap-7 hidden sm:flex">
+          <ul className="items-center gap-5 hidden sm:flex">
             {NAV_LINK.map(({ id, label, link }) => (
               <li
                 key={id}
