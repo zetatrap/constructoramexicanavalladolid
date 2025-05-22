@@ -27,12 +27,12 @@ const Contact = () => {
       <FirstSection image={HeaderHomeImage} />
 
       <motion.div
-        className="max-w-xl mx-auto p-8 bg-[#3a3a3a] rounded-2xl shadow-2xl mt-10 mb-20 font-poppins"
+        className="max-w-xl mx-3 sm:mx-auto p-4 md:p-8 bg-[#3a3a3a] rounded-2xl shadow-2xl mt-10 mb-20 font-poppins"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
       >
-        <h2 className="text-3xl font-bold text-amber-100 mb-6 text-center">
+        <h2 className="text-2xl md:text-3xl font-bold text-amber-100 mb-6 text-center">
           Contacto
         </h2>
         <form onSubmit={handleSubmit} className="space-y-6">

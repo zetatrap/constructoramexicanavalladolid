@@ -49,7 +49,6 @@ import DepartamentoResidencial2Image from '@/assets/images/departamentos/departa
 // Hoteles
 import Hotel1Image from '@/assets/images/obras-comerciales/hoteles-1.jpg'
 import Hotel2Image from '@/assets/images/obras-comerciales/hoteles-2.jpg'
-import Hotel3Image from '@/assets/images/obras-comerciales/hoteles-3.jpg'
 // Oficinas
 import Oficina1Image from '@/assets/images/obras-comerciales/oficinas-1.jpg'
 import Oficina2Image from '@/assets/images/obras-comerciales/oficinas-2.jpg'
@@ -89,7 +88,6 @@ import Carretera1Image from '@/assets/images/vias-publicas-e-infraestructura/car
 import Carretera2Image from '@/assets/images/vias-publicas-e-infraestructura/carreteras-2.jpg'
 import Carretera3Image from '@/assets/images/vias-publicas-e-infraestructura/carreteras-3.jpg'
 // Puentes
-import Puente1Image from '@/assets/images/vias-publicas-e-infraestructura/puentes-1.jpg'
 import Puente2Image from '@/assets/images/vias-publicas-e-infraestructura/puentes-2.jpg'
 import Puente3Image from '@/assets/images/vias-publicas-e-infraestructura/puentes-3.jpg'
 
@@ -210,7 +208,7 @@ export const WORKS = [
         id: 1,
         label: 'Hoteles',
         sublink: 'hoteles',
-        images: [Hotel1Image, Hotel2Image, Hotel3Image],
+        images: [Hotel1Image, Hotel2Image],
       },
       {
         id: 2,
@@ -300,7 +298,7 @@ export const WORKS = [
         id: 2,
         label: 'Puentes',
         sublink: 'puentes',
-        images: [Puente1Image, Puente2Image, Puente3Image],
+        images: [Puente2Image, Puente3Image],
       },
     ],
   },

@@ -8,7 +8,7 @@ const FirstSection: React.FC<Props> = ({ image }) => {
       <img
         src={image}
         alt="first-section-image"
-        className="w-full h-[600px] object-cover"
+        className="w-full h-[200px] md:h-[300px] lg:h-[500px] object-cover"
       />
     </section>
   )

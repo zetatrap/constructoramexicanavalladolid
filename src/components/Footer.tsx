@@ -1,9 +1,11 @@
 const Footer = () => {
   return (
-    <footer className="font-poppins text-amber-50 flex flex-col items-center text-sm">
-      <span className="font-semibold">constructoramexicanavalladolid ©</span>
+    <footer className="font-poppins text-amber-50 flex flex-col items-center text-xs sm:text-sm">
+      <span className="font-semibold text-center">
+        constructoramexicanavalladolid ©
+      </span>
 
-      <span className="text-xs">
+      <span className="text-xs text-center">
         Todos los derechos reservados sobre esta marca.
       </span>
 

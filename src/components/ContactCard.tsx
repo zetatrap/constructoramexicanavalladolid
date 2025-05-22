@@ -1,4 +1,4 @@
-import ContactCardImage from '@/assets/images/tarjeta-contacto.png'
+import ContactCardImage from '@/assets/images/terreno_vender.png'
 import { useState, useEffect } from 'react'
 
 const ContactCard = () => {
@@ -9,7 +9,7 @@ const ContactCard = () => {
     const timer = setTimeout(() => {
       setIsOpen(true)
       setTimeout(() => setShow(true), 50)
-    }, 1500)
+    }, 2000)
 
     return () => clearTimeout(timer)
   }, [])
@@ -24,7 +24,7 @@ const ContactCard = () => {
         >
           <span
             onClick={() => setIsOpen(false)}
-            className="font-poppins text-black text-2xl font-semibold cursor-pointer absolute top-1 right-1"
+            className="font-poppins text-black text-2xl font-semibold cursor-pointer absolute top-0 right-1"
           >
             X
           </span>
@@ -32,7 +32,7 @@ const ContactCard = () => {
           <img
             src={ContactCardImage}
             alt="contact-card"
-            className="h-[300px] cursor-pointer rounded-lg"
+            className="h-[150px] md:h-[200px] lg:h-[300px] cursor-pointer rounded-lg"
           />
         </div>
       )}

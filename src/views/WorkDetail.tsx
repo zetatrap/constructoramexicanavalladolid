@@ -15,16 +15,16 @@ const WorkDetail = () => {
       <FirstSection image={selectedWork?.image as string} />
 
       <div className="my-10 flex flex-col items-center gap-5">
-        <h2 className="text-center text-amber-800 bg-amber-200 text-3xl font-poppins w-full py-2">
+        <h2 className="text-center text-amber-800 bg-amber-200 text-xl md:text-3xl font-poppins w-full py-2">
           {selectedWork?.label}
         </h2>
 
-        <h3 className="text-center text-amber-50 font-medium text-3xl font-poppins">
+        <h3 className="text-center text-amber-50 font-medium text-xl md:text-3xl font-poppins">
           {selectedSubwork?.label}
         </h3>
       </div>
 
-      <div className="px-10">
+      <div className="px-3 md:px-10">
         {selectedSubwork?.images &&
           (Array.isArray(selectedSubwork.images) ? (
             <div
@@ -37,7 +37,7 @@ const WorkDetail = () => {
               {(selectedSubwork.images as string[]).map((img, idx) => {
                 const imagesArr = selectedSubwork.images as string[]
                 let className =
-                  'rounded-lg shadow-lg w-full h-[500px] transition duration-500'
+                  'rounded-lg shadow-lg w-full h-[300px] md:h-[500px] transition duration-500'
                 if (imagesArr.length !== 4) {
                   if (imagesArr.length === 2) {
                     className += ' col-span-2 row-span-2 h-72'
@@ -64,7 +64,7 @@ const WorkDetail = () => {
           ) : (
             Object.entries(selectedSubwork.images).map(([tipo, imgs]) => (
               <div key={tipo} className="mt-10">
-                <h4 className="text-amber-100 font-semibold text-3xl mb-4 capitalize font-poppins">
+                <h4 className="text-amber-100 font-semibold text-xl md:text-3xl mb-2 capitalize font-poppins">
                   {tipo}
                 </h4>
                 <div
@@ -79,9 +79,9 @@ const WorkDetail = () => {
                       'rounded-lg shadow-lg w-full h-72 transition duration-500'
                     if ((imgs as string[]).length !== 4) {
                       if ((imgs as string[]).length === 2) {
-                        className += ' col-span-2 row-span-2 h-[400px]'
+                        className += ' col-span-2 row-span-2 h-[200px] md:h-[400px]'
                       } else if (idx === 0) {
-                        className += ' col-span-2 row-span-2 h-[590px]'
+                        className += ' col-span-2 row-span-2 h-[300px] md:h-[590px]'
                       } else if (idx % 5 === 0) {
                         className += ' row-span-2 h-72'
                       }

@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import { Hamburger } from '@/icons'
 import { useNavigate } from 'react-router-dom'
 import { WORKS } from '@/data'
+import LogoImage from '@/assets/images/logo.png'
 
 const NAV_LINK = [
   { id: 1, label: 'Inicio', link: '/' },
@@ -70,12 +71,12 @@ const Header = () => {
   return (
     <header className="bg-[#272727] w-full font-poppins text-white py-5 px-3 relative">
       <div className="max-w-[1200px] w-full flex items-center justify-between mx-auto">
-        <h1
+        <img
           onClick={() => navigateWithTransition('/')}
-          className="font-bold text-xl cursor-pointer"
-        >
-          LOGO
-        </h1>
+          src={LogoImage}
+          alt="logo-constructora-mexicana-valladolid"
+          className="h-12 w-14 cursor-pointer"
+        />
 
         <nav>
           <button
@@ -95,16 +96,14 @@ const Header = () => {
                     ? () => navigateWithTransition(link)
                     : undefined
                 }
-                className="cursor-pointer text-lg font-semibold relative"
+                className="cursor-pointer text-base md:text-lg font-semibold relative"
               >
                 <span
                   onClick={label === 'Obras' ? toggleWorksMenu : undefined}
-                  className="flex items-center text-white hover:bg-amber-100 hover:text-amber-950 py-1 px-3 transition-all duration-300 ease-in-out rounded-sm"
+                  className="flex items-center gap-0.5 text-white hover:bg-amber-100 hover:text-amber-950 py-1 px-3 transition-all duration-300 ease-in-out rounded-sm"
                 >
                   {label}
-                  {label === 'Obras' && (
-                    <span className="text-sm ml-0.5">▼</span>
-                  )}
+                  {label === 'Obras' && <span className="text-sm">▼</span>}
                 </span>
                 {label === 'Obras' && isWorksOpen && (
                   <ul
@@ -151,38 +150,47 @@ const Header = () => {
             className="absolute top-full left-0 right-0 w-full bg-[#272727] sm:hidden"
           >
             <ul className="flex flex-col items-center justify-center">
-              {NAV_LINK.map(({ id, label }) => (
+              {NAV_LINK.map(({ id, label, link }) => (
                 <li
                   key={id}
                   ref={label === 'Obras' ? obrasRef : null}
-                  className="hover:bg-[#333] cursor-pointer transition-all duration-300 ease-in-out font-semibold text-lg w-full py-2 flex flex-col items-center justify-center"
+                  onClick={
+                    link && label !== 'Obras'
+                      ? () => navigateWithTransition(link)
+                      : undefined
+                  }
+                  className="cursor-pointer font-semibold text-lg flex flex-col items-center justify-center w-full"
                 >
                   <span
+                    className="hover:bg-amber-100 hover:text-amber-950 text-white flex items-center justify-center gap-0.5 transition-all duration-300 ease-in-out w-full py-2"
                     onClick={label === 'Obras' ? toggleWorksMenu : undefined}
                   >
                     {label}
-                    {label === 'Obras' && (
-                      <span className="text-sm ml-0.5">▼</span>
-                    )}
+                    {label === 'Obras' && <span className="text-sm">▼</span>}
                   </span>
                   {label === 'Obras' && isWorksOpen && (
                     <ul ref={dropdownRef} className="w-full bg-[#333]">
-                      {WORKS.map(({ id, label, subworks }) => (
+                      {WORKS.map(({ id, label, subworks, link }) => (
                         <li
                           key={id}
                           onClick={() => toggleSubWordsMenu(id)}
-                          className="w-full hover:bg-[#444] flex flex-col items-center justify-center py-1 text-base font-medium"
+                          className="w-full flex flex-col items-center justify-center text-sm font-medium"
                         >
-                          <div className="flex items-center">
+                          <span className="flex items-center justify-center gap-0.5 hover:bg-amber-100 hover:text-amber-950 text-white w-full py-2">
                             {label}
-                            <span className="text-xs ml-0.5">▼</span>
-                          </div>
+                            <span className="text-xs">▼</span>
+                          </span>
                           {openWorkId === id && (
-                            <ul className="w-full">
-                              {subworks.map(({ id, label }) => (
+                            <ul className="w-full bg-[#444]">
+                              {subworks.map(({ id, label, sublink }) => (
                                 <li
                                   key={id}
-                                  className="hover:bg-[#555] w-full flex items-center justify-center py-1"
+                                  onClick={() =>
+                                    navigateWithTransition(
+                                      `/${link}/${sublink}`
+                                    )
+                                  }
+                                  className="hover:bg-amber-100 hover:text-amber-950 text-white w-full flex items-center justify-center py-2"
                                 >
                                   {label}
                                 </li>
