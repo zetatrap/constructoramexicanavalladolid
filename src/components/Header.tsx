@@ -125,9 +125,11 @@ const Header = () => {
                             {subworks.map(({ id, label, sublink }) => (
                               <li
                                 key={id}
-                                onClick={() =>
+                                onClick={() => {
                                   navigateWithTransition(`/${link}/${sublink}`)
-                                }
+                                  setIsWorksOpen(false)
+                                  setOpenWorkId(null)
+                                }}
                                 className="hover:bg-amber-100 hover:text-amber-950 transition-all duration-300 ease-in-out cursor-pointer w-full p-2"
                               >
                                 {label}
@@ -185,11 +187,14 @@ const Header = () => {
                               {subworks.map(({ id, label, sublink }) => (
                                 <li
                                   key={id}
-                                  onClick={() =>
+                                  onClick={() => {
                                     navigateWithTransition(
                                       `/${link}/${sublink}`
                                     )
-                                  }
+                                    setIsWorksOpen(false)
+                                    setOpenWorkId(null)
+                                    setShowMobileMenu(false)
+                                  }}
                                   className="hover:bg-amber-100 hover:text-amber-950 text-white w-full flex items-center justify-center py-2"
                                 >
                                   {label}
