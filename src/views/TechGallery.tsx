@@ -6,7 +6,7 @@ const TechGallery = () => {
     <>
       <FirstSection image="https://picsum.photos/1920/1080" />
 
-      <h2 className="text-center text-amber-800 bg-amber-200 text-xl md:text-3xl font-poppins w-full py-2 mt-10">
+      <h2 className="text-center text-amber-800 bg-amber-200 text-xl md:text-3xl font-poppins w-full py-2 mt-10 px-1 sm:px-0">
         Galería Técnica
       </h2>
 

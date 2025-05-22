@@ -3,7 +3,7 @@ import GoogleMapsImage from '@/assets/images/google-maps.png'
 const SecondSection = () => {
   return (
     <section className="font-poppins mt-5">
-      <h2 className="text-center text-amber-800 text-lg md:text-2xl text-pretty bg-amber-200 py-2 md:py-4">
+      <h2 className="text-center text-amber-800 text-lg md:text-2xl text-pretty bg-amber-200 py-2 md:py-4 px-1 sm:px-0">
         Nuestro compromiso es brindar soluciones innovadoras, sostenibles y de
         calidad.
       </h2>

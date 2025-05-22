@@ -15,7 +15,7 @@ const WorkDetail = () => {
       <FirstSection image={selectedWork?.image as string} />
 
       <div className="my-10 flex flex-col items-center gap-5">
-        <h2 className="text-center text-amber-800 bg-amber-200 text-xl md:text-3xl font-poppins w-full py-2">
+        <h2 className="text-center text-amber-800 bg-amber-200 text-xl md:text-3xl font-poppins w-full py-2 px-1 sm:px-0">
           {selectedWork?.label}
         </h2>
 
