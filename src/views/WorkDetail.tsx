@@ -1,14 +1,15 @@
 import { useParams } from 'react-router-dom'
 import { WORKS } from '@/data'
+import type { Subwork, Work } from '@/data'
 import FirstSection from '@/sections/FirstSection'
 
 const WorkDetail = () => {
   const { work, subwork } = useParams()
 
-  const selectedWork = WORKS.find((w) => w.link === work)
+  const selectedWork = WORKS.find((w) => w.link === work) as Work | undefined
   const selectedSubwork = selectedWork?.subworks.find(
     (s) => s.sublink === subwork
-  )
+  ) as Subwork | undefined
 
   return (
     <>
@@ -23,6 +24,25 @@ const WorkDetail = () => {
           {selectedSubwork?.label}
         </h3>
       </div>
+
+      {selectedSubwork?.mainText && (
+        <div className="mb-10 px-3 md:px-10">
+          <p className="text-amber-50 text-base md:text-lg whitespace-pre-line">
+            {selectedSubwork.mainText}
+          </p>
+        </div>
+      )}
+
+      {selectedSubwork?.listText && (
+        <ul className="text-amber-50 text-base md:text-lg list-disc px-3 md:px-10 mb-10">
+          {selectedSubwork.listText
+            .split('•')
+            .filter(Boolean)
+            .map((item, idx) => (
+              <li key={idx}>{item.trim()}</li>
+            ))}
+        </ul>
+      )}
 
       <div className="px-3 md:px-10">
         {selectedSubwork?.images &&
@@ -79,9 +99,11 @@ const WorkDetail = () => {
                       'rounded-lg shadow-lg w-full h-72 transition duration-500'
                     if ((imgs as string[]).length !== 4) {
                       if ((imgs as string[]).length === 2) {
-                        className += ' col-span-2 row-span-2 h-[200px] md:h-[400px]'
+                        className +=
+                          ' col-span-2 row-span-2 h-[200px] md:h-[400px]'
                       } else if (idx === 0) {
-                        className += ' col-span-2 row-span-2 h-[300px] md:h-[590px]'
+                        className +=
+                          ' col-span-2 row-span-2 h-[300px] md:h-[590px]'
                       } else if (idx % 5 === 0) {
                         className += ' row-span-2 h-72'
                       }

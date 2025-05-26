@@ -1,3 +1,20 @@
+export type Subwork = {
+  id: number
+  label: string
+  sublink: string
+  images: string[] | { casas: string[]; departamentos: string[] }
+  mainText?: string
+  listText?: string
+}
+
+export type Work = {
+  id: number
+  label: string
+  link: string
+  image: string
+  subworks: Subwork[]
+}
+
 /* CASAS */
 // Casas Básico
 import CasaBásico1Image from '@/assets/images/casas/casa-básico-1.png'
@@ -116,7 +133,7 @@ import Renders5Image from '@/assets/images/galeria-tecnica/renders-5.jpg'
 import Renders6Image from '@/assets/images/galeria-tecnica/renders-6.jpg'
 import Renders7Image from '@/assets/images/galeria-tecnica/renders-7.jpg'
 
-export const WORKS = [
+export const WORKS: Work[] = [
   {
     id: 1,
     label: 'Casas / Apartamentos',
@@ -208,6 +225,8 @@ export const WORKS = [
         id: 1,
         label: 'Hoteles',
         sublink: 'hoteles',
+        mainText:
+          'Combinamos funcionalidad y diseño estético, creando espacios acogedores y atractivos para los huéspedes. Cada detalle, desde la distribución de las habitaciones hasta la elección de los materiales, es cuidadosamente planeado para ofrecer una experiencia confortable y memorable.',
         images: [Hotel1Image, Hotel2Image],
       },
       {
@@ -220,12 +239,16 @@ export const WORKS = [
         id: 3,
         label: 'Oficinas',
         sublink: 'oficinas',
+        listText:
+          '• Diseño y Distribución del Espacio: Optimizar el uso del espacio con distribución eficiente y ergonómica. • Materiales duraderos y sostenibles: tecnología de eficiencia energética (ventanas con aislamiento térmico, iluminación LED, etc.). • Iluminación y Ventilación: maximizamos el uso de luz natural para reducir costos de energía. Instalaciones de sistemas de ventilación y climatización eficientes. Se utiliza iluminación artificial equilibrada para evitar la fatiga visual.',
         images: [Oficina1Image, Oficina2Image],
       },
       {
         id: 4,
         label: 'Restaurantes',
         sublink: 'restaurantes',
+        mainText: `Diseño Sostenible en la Gastronomía: Espacios Amigables con el Medio Ambiente. 
+        Construcciones  optimizadas. Una construcción diseñada específicamente para tu restaurante te permitirá aprovechar al máximo el espacio, optimizar los flujos de trabajo y brindar una experiencia excepcional a tus clientes. Con una construcción bien planificada y ejecutada, podrás aumentar tu capacidad de atención, mejorar la eficiencia operativa y generar mayores ingresos.`,
         images: [Restaurante1Image, Restaurante2Image],
       },
       // { id: 5, label: 'Mobiliarios', sublink: 'mobiliarios' },
@@ -241,6 +264,8 @@ export const WORKS = [
         id: 1,
         label: 'Fábricas',
         sublink: 'fabricas',
+        listText:
+          '• Centros de Almacenamiento y Distribución. • Instalaciones de Manufactura. • Plantas de Energía. • Instalaciones de Procesamiento Químico. • Instalaciones Mineras.',
         images: [Fábrica1Image, Fábrica2Image],
       },
       {
@@ -253,6 +278,10 @@ export const WORKS = [
         id: 3,
         label: 'Bodegas',
         sublink: 'bodegas',
+        mainText:
+          'Una bodega no solo sirve como lugar de almacenamiento, sino que es un elemento clave para la organización y gestión eficiente de inventarios',
+        listText:
+          'Espacios amplios y libres de obstáculos: Permite la circulación de mercancías y maquinaria de manera fluida. •	Sistemas de ventilación y climatización: Crucial para garantizar que los productos almacenados se mantengan en óptimas condiciones. •	Iluminación adecuada: Tanto natural como artificial, la luz es clave para la seguridad y la eficiencia del trabajo en el interior de la bodega. •	Diseño modular: Facilita la expansión o modificación de la estructura según las necesidades cambiantes de la empresa. •	Bodegas industriales: Especialmente diseñadas para almacenar maquinaria pesada, productos manufacturados o materias primas. •	Bodegas logísticas: Centradas en el manejo y distribución de productos, con fácil acceso para camiones y otras formas de transporte. • Bodegas refrigeradas: Utilizadas para almacenar productos que requieren temperaturas controladas, como alimentos y medicamentos. •	Mini-bodegas: Espacios más pequeños, ideales para el almacenamiento de productos en menor escala o uso personal.',
         images: [Bodega1Image, Bodega2Image, Bodega3Image, Bodega4Image],
       },
     ],
@@ -267,12 +296,18 @@ export const WORKS = [
         id: 1,
         label: 'Escuelas',
         sublink: 'escuelas',
+        listText:
+          '• Planeación • Contratación • Proyecto Ejecutivo • Construcción •Mobiliario y Equipamiento •	Elementos para la Conservación del Ambiente •	Cumplimiento de normas establecidas por la Secretaría de Desarrollo Urbano y Vivienda (SEDUVI) • Consideración de aspectos como seguridad estructural, ventilación, iluminación y accesibilidad.',
         images: [Escuela1Image, Escuela2Image],
       },
       {
         id: 2,
         label: 'Hospitales',
         sublink: 'hospitales',
+        mainText: `Contar con sólidos estudios de pre-inversión para los diseños. 
+      Planificación, diseño, licencias, permisos y arquitectura.`,
+        listText:
+          '• Diseño arquitectónico funcional: Centrado en la funcionalidad y el flujo de trabajo. • Tecnología avanzada: Incorporación de tecnología para atención médica efectiva. • Mantenimiento y sostenibilidad: La infraestructura debe ser sostenible y bien mantenida. • Espacios para la atención centrada en el paciente.',
         images: [
           Hospital1Image,
           Hospital2Image,

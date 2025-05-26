@@ -20,6 +20,7 @@ const Contact = () => {
     e.preventDefault()
     console.log('Datos enviados:', formData)
     // Podés agregar lógica para enviar por correo o API
+    // "xovdzged"
   }
 
   return (
