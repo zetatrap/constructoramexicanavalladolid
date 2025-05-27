@@ -50,7 +50,7 @@ const Contact = () => {
               value={formData.nombre}
               onChange={handleChange}
               required
-              className="w-full mt-1 px-4 py-2 border border-amber-50 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-100"
+              className="w-full mt-1 px-4 py-2 border border-amber-50 text-amber-50 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-100"
             />
           </motion.div>
 
@@ -67,7 +67,7 @@ const Contact = () => {
               value={formData.correo}
               onChange={handleChange}
               required
-              className="w-full mt-1 px-4 py-2 border border-amber-50 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-100"
+              className="w-full mt-1 px-4 py-2 border border-amber-50 text-amber-50 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-100"
             />
           </motion.div>
 
@@ -84,7 +84,7 @@ const Contact = () => {
               onChange={handleChange}
               required
               rows={4}
-              className="w-full mt-1 px-4 py-2 border border-amber-50 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-amber-100"
+              className="w-full mt-1 px-4 py-2 border border-amber-50 text-amber-50 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-amber-100"
             />
           </motion.div>
 
