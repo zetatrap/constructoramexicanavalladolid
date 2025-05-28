@@ -7,6 +7,7 @@ import Contact from './views/Contact'
 import ContactCard from './components/ContactCard'
 import Footer from './components/Footer'
 import TechGallery from './views/TechGallery'
+import Furniture from './views/Furniture'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/:work/:subwork" element={<WorkDetail />} />
         <Route path="/contacto" element={<Contact />} />
         <Route path="/galeria-tecnica" element={<TechGallery />} />
+        <Route path="/muebles" element={<Furniture />} />
       </Routes>
       <Footer />
       <LinkContact />

@@ -6,10 +6,10 @@ import FirstSection from '@/sections/FirstSection'
 const WorkDetail = () => {
   const { work, subwork } = useParams()
 
-  const selectedWork = WORKS.find((w) => w.link === work) as Work | undefined
-  const selectedSubwork = selectedWork?.subworks.find(
+  const selectedWork: Work | undefined = WORKS.find((w) => w.link === work)
+  const selectedSubwork: Subwork | undefined = selectedWork?.subworks.find(
     (s) => s.sublink === subwork
-  ) as Subwork | undefined
+  )
 
   return (
     <>
@@ -49,12 +49,12 @@ const WorkDetail = () => {
           (Array.isArray(selectedSubwork.images) ? (
             <div
               className={`grid gap-4 ${
-                (selectedSubwork.images as string[]).length === 4
+                selectedSubwork.images.length === 4
                   ? 'grid-cols-2'
                   : 'grid-cols-2 md:grid-cols-4'
               }`}
             >
-              {(selectedSubwork.images as string[]).map((img, idx) => {
+              {selectedSubwork.images.map((img, idx) => {
                 const imagesArr = selectedSubwork.images as string[]
                 let className =
                   'rounded-lg shadow-lg w-full h-[300px] md:h-[500px] transition duration-500'
@@ -89,16 +89,16 @@ const WorkDetail = () => {
                 </h4>
                 <div
                   className={`grid gap-4 ${
-                    (imgs as string[]).length === 4
+                    imgs.length === 4
                       ? 'grid-cols-2'
                       : 'grid-cols-2 md:grid-cols-4'
                   }`}
                 >
-                  {(imgs as string[]).map((img, idx) => {
+                  {imgs.map((img, idx) => {
                     let className =
                       'rounded-lg shadow-lg w-full h-72 transition duration-500'
-                    if ((imgs as string[]).length !== 4) {
-                      if ((imgs as string[]).length === 2) {
+                    if (imgs.length !== 4) {
+                      if (imgs.length === 2) {
                         className +=
                           ' col-span-2 row-span-2 h-[200px] md:h-[400px]'
                       } else if (idx === 0) {

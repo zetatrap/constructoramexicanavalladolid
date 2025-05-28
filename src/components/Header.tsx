@@ -9,6 +9,7 @@ const NAV_LINK = [
   { id: 2, label: 'Obras' },
   { id: 3, label: 'Contacto', link: '/contacto' },
   { id: 4, label: 'Galería Técnica', link: '/galeria-tecnica' },
+  { id: 5, label: 'Muebles', link: '/muebles' },
 ]
 
 const Header = () => {
