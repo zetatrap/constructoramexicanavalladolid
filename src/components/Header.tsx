@@ -20,6 +20,7 @@ const Header = () => {
   const obrasRef = useRef<HTMLLIElement>(null)
   const dropdownRef = useRef<HTMLUListElement>(null)
   const menuMobileRef = useRef<HTMLUListElement>(null)
+  const hamburgerRef = useRef<HTMLButtonElement>(null)
 
   const navigate = useNavigate()
 
@@ -32,6 +33,13 @@ const Header = () => {
   }
 
   const handleClickOutside = (event: MouseEvent) => {
+    if (
+      hamburgerRef.current &&
+      hamburgerRef.current.contains(event.target as Node)
+    ) {
+      return
+    }
+
     if (
       obrasRef.current &&
       dropdownRef.current &&
@@ -81,13 +89,17 @@ const Header = () => {
 
         <nav>
           <button
-            onClick={() => setShowMobileMenu(!showMobileMenu)}
+            ref={hamburgerRef}
+            onClick={(evt) => {
+              evt.stopPropagation()
+              setShowMobileMenu(!showMobileMenu)
+            }}
             aria-label="Abrir menú"
-            className="flex sm:hidden"
+            className="flex md:hidden"
           >
             <Hamburger className="size-8 cursor-pointer" />
           </button>
-          <ul className="items-center gap-5 hidden sm:flex">
+          <ul className="items-center gap-5 hidden md:flex">
             {NAV_LINK.map(({ id, label, link }) => (
               <li
                 key={id}
@@ -150,7 +162,7 @@ const Header = () => {
         {showMobileMenu && (
           <nav
             ref={menuMobileRef}
-            className="absolute top-full left-0 right-0 w-full bg-[#272727] sm:hidden"
+            className="absolute top-full left-0 right-0 w-full bg-[#272727] md:hidden"
           >
             <ul className="flex flex-col items-center justify-center">
               {NAV_LINK.map(({ id, label, link }) => (

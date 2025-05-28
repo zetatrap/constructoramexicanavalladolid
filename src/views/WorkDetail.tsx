@@ -128,9 +128,14 @@ const WorkDetail = () => {
       </div>
 
       <div className="flex justify-center mt-10 mb-20">
-        <button className="bg-amber-200 text-amber-950 shadow-md shadow-amber-400 hover:bg-amber-100 transition duration-200 font-poppins px-10 py-3 rounded-md font-bold text-xl cursor-pointer">
+        <a
+          href="https://wa.me/524341144355"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-amber-200 text-amber-950 shadow-md shadow-amber-400 hover:bg-amber-100 transition duration-200 font-poppins px-10 py-3 rounded-md font-bold text-xl cursor-pointer"
+        >
           Contactar
-        </button>
+        </a>
       </div>
     </>
   )
